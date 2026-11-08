@@ -1,0 +1,13 @@
+{
+    "/api": {
+      "target": "https://localhost:7000",
+      "secure": false,
+      "changeOrigin": true
+    },
+    "/angular": {
+      "target": "http://localhost:4200",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": { "^/angular": "" }
+    }
+  }

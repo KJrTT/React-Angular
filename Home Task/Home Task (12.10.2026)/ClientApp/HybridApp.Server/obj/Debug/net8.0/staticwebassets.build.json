@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IBY1GATD49D76Mb2d0aL4VXS/fU77r5oszCK+3Iryx8=",
+  "Source": "HybridApp.Server",
+  "BasePath": "_content/HybridApp.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
