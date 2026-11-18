@@ -1,0 +1,67 @@
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .star-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ccc; 
+    transition: transform 0.2s;
+  }
+  
+  .star-btn:hover {
+    transform: scale(1.1);
+  }
+  
+
+  .star-btn.filled {
+    color: #ffc107; 
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+  }
+  
+  .delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc0000;
+  }
+
+  .star-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* Делаем звезду серой по умолчанию */
+    filter: grayscale(100%) opacity(50%); 
+    transition: all 0.2s;
+  }
+  
+  /* Когда класс .filled добавлен (задача в избранном) */
+  .star-btn.filled {
+    filter: grayscale(0%) opacity(100%); /* Убираем серость, делаем яркой */
+    transform: scale(1.1); /* Немного увеличиваем */
+  }

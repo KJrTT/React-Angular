@@ -297,11 +297,11 @@ int main()
 
     // Задание 11 (Пользователь вводит номер дня недели (1–7). Через switch выведите, рабочий это день или выходной. Сгруппируйте case 1..5 и case 6..7 через проваливание. Некорректный номер — через default.)
 
-    /*int day;
+    int day;
     cout << "Введите номер дня недели (1–7): ";
     cin >> day;
 
-    cout << CheckDayOfWeek(day) << endl;*/
+    cout << CheckDayOfWeek(day) << endl;
 
     // Задание 12 ( Пользователь вводит символ операции (+ - * /) и два числа. Выполните операцию через switch. Для / проверьте деление на ноль через std::fabs(b) < 1e-9. Некорректную операцию обработайте в default.)
     //
@@ -337,7 +337,7 @@ int main()
     cout << DescribeNumber(number) << endl;*/
 
     // Задание 15 (Пользователь вводит int x и unsigned int y. Напишите корректное сравнение x < y, приведя оба к long long через static_cast. Сравните с «наивным» x < y и объясните в комментарии, почему результаты могут отличаться при x = -1, y = 1.)
-    int x;
+   /* int x;
     unsigned int y;
 
     cout << "Введите знаковое целое x (например, -1): ";
@@ -346,7 +346,7 @@ int main()
     cout << "Введите беззнаковое целое y (например, 1): ";
     cin >> y;
 
-    cout << "\n" << CompareSignedAndUnsigned(x, y) << endl;
+    cout << "\n" << CompareSignedAndUnsigned(x, y) << endl;*/
     
     return 0;
 }
