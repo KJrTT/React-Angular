@@ -1,0 +1,38 @@
+<h2>Создать заметку</h2>
+
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Заголовок</label>
+    <input id="title" type="text" formControlName="title" />
+    @if (title?.invalid && title?.touched) {
+      @if (title?.errors?.['required']) {
+        <small style="color: red">Заголовок обязателен</small>
+      }
+      @if (title?.errors?.['minlength']) {
+        <small style="color: red">Минимум 3 символа</small>
+      }
+    }
+  </div>
+
+  <div>
+    <label for="text">Текст</label>
+    <textarea id="text" formControlName="text"></textarea>
+    @if (text?.invalid && text?.touched) {
+      @if (text?.errors?.['required']) {
+        <small style="color: red">Текст обязателен</small>
+      }
+      @if (text?.errors?.['minlength']) {
+        <small style="color: red">Минимум 5 символов</small>
+      }
+    }
+  </div>
+
+  <button type="submit" [disabled]="noteForm.invalid">Создать</button>
+
+  @if (successMessage) {
+    <p style="color: green">{{ successMessage }}</p>
+  }
+  @if (errorMessage) {
+    <p style="color: red">{{ errorMessage }}</p>
+  }
+</form>

@@ -1,0 +1,21 @@
+<h2>Заметки</h2>
+
+@if (isLoading) {
+  <p>Загрузка...</p>
+}
+
+@if (errorMessage) {
+  <p style="color: red">{{ errorMessage }}</p>
+}
+
+@if (!isLoading) {
+  @for (note of notes; track note.id) {
+    <div>
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.text }}</p>
+      <button (click)="remove(note.id)">Удалить</button>
+    </div>
+  } @empty {
+    <p>Заметок нет</p>
+  }
+}
